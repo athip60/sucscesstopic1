@@ -1,0 +1,77 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <h3>แก้ไขข้อมูล</h3>
+  </mat-card-header>
+  <form>
+    <div class="example-container">
+      <p style="text-align: center">
+        <mat-form-field appearance="outline" style="width: 400px">
+          <mat-label>หมวดหมู่หนัง</mat-label>
+          <mat-select [(ngModel)]="data.catagory" name="catagory">
+            <mat-option
+              value="option"
+              *ngFor="let catagory of catagorys"
+              [value]="catagory.type"
+              >{{ catagory.type }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline" style="width: 400px">
+          <mat-label>ชื่อหนัง</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            name="namemovie"
+            [(ngModel)]="data.namemovie"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline" style="width: 400px">
+          <mat-label>หัวข้อ</mat-label>
+          <input
+            matInput
+            placeholder="Placeholder"
+            name="title"
+            [(ngModel)]="data.title"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="outline" style="width: 400px">
+          <mat-label>คำอธิบาย</mat-label>
+          <textarea
+            rows="10"
+            matInput
+            placeholder="Placeholder"
+            name="description"
+            [(ngModel)]="data.description"
+          ></textarea>
+        </mat-form-field>
+      </p>
+      <p style="text-align: center">
+        <button
+          style="width: 200px; margin-right: 5%"
+          mat-raised-button
+          (click)="submitUpdate()"
+          color="primary"
+          *ngIf="
+            data.catagory && data.namemovie && data.title && data.description
+          "
+        >
+          บันทึก
+        </button>
+        <button
+          style="width: 100px; background-color: #d32f2f; color: white"
+          mat-raised-button
+          [routerLink]="['/viewdata', data._id]"
+        >
+          ยกเลิก
+        </button>
+      </p>
+    </div>
+  </form>
+</mat-card>
+<br />
+<br />
+<br />
+<br />

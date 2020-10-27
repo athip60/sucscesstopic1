@@ -1,0 +1,118 @@
+<!-- <td>{{ review.catagory }}</td>
+            <td>{{ review.namemovie }}</td>
+            <td>{{ review.title }}</td>
+            <td>{{ review.description }}</td> -->
+<!-- <td>
+              <div>
+                <button
+                  mat-raised-button
+                  [routerLink]="['/viewdata', review._id]"
+                  style="background-color: #1cbe3f"
+                >
+                  ดูข้อมูล
+                </button>
+              </div>
+            </td> -->
+<!-- <td>
+              <button
+                *ngIf="user_data._id == review.user_id"
+                mat-raised-button
+                [routerLink]="['/edit', review._id]"
+                style="background-color: #ffa000"
+              >
+                แก้ไข
+              </button>
+            </td>
+            <td>
+              <a
+                role="button"
+                *ngIf="user_data._id == review.user_id"
+                mat-raised-button
+                (click)="deleteData(review._id)"
+                style="background-color: #d32f2f"
+                >ลบ</a
+              >
+            </td> -->
+<div
+  style="
+    padding-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+  "
+>
+  <div class="row">
+    <div class="card-content leftcolumn">
+      <div class="row">
+        <span>
+          <a routerLink="/">
+            <mat-icon>keyboard_backspace</mat-icon>
+          </a>
+        </span>
+      </div>
+      <div class="row">
+        <div class="content-topic">
+          <div style="padding: 10px">
+            <div style="padding: 1%">
+              <mat-card
+                ><mat-card-title>{{ data.title }}</mat-card-title>
+                <mat-card-subtitle
+                  >{{ data.catagory }}&nbsp;|&nbsp;{{
+                    data.createdAt | date:'dd-MM-yyyy'
+                  }}</mat-card-subtitle
+                >
+                <mat-card-content>
+                  {{ data.description }}
+                </mat-card-content>
+                <mat-card-subtitle
+                  >By &nbsp;{{ data.user_name }}</mat-card-subtitle
+                >
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-content rightcolumn">
+      <br />
+      <br /><br />
+      <div class="row">
+        <div class="content-topic">
+          <div style="padding: 10px">
+            <section fxLayout="row" fxLayoutGap="5%" class="stycky">
+              <article class="progress-card" fxFlex="30">
+                <mat-card fxLayout="column" fxLayoutAlign="center center">
+                  <mat-card-title><h2>เครื่องมือเสริม</h2></mat-card-title>
+                  <mat-card-content>
+                    <mat-list>
+                      <mat-list-item>
+                        <button
+                          class="box"
+                          mat-raised-button
+                          [routerLink]="['/edit', data._id]"
+                          style="background-color: #ffa000"
+                        >
+                          <mat-icon>create_port</mat-icon>แก้ไข
+                        </button></mat-list-item
+                      >
+                      <mat-list-item
+                        ><button
+                          class="box"
+                          mat-raised-button
+                          (click)="deleteData(data._id)"
+                          style="background-color: #d32f2f"
+                        >
+                          <mat-icon>delete</mat-icon>ลบ
+                        </button></mat-list-item
+                      >
+                    </mat-list>
+                  </mat-card-content>
+                </mat-card>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

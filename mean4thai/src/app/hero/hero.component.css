@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;600&display=swap");
+
+* {
+  font-family: "Kanit", sans-serif;
+}
+.content-topic-page {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+.title-topic {
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+.card-content {
+  padding-bottom: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: white;
+  border-radius: 10px;
+  opacity: 0.8;
+  background-color: #3e3e3e;
+}
+.content-card {
+  background-color: #262626;
+  opacity: 1;
+}
+table {
+  width: 100%;
+}
+th {
+  text-align: center;
+}
+.content-flim {
+  background-color: #262626;
+  opacity: 1px;
+  width: 400px;
+  height: 100px;
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+.content-topic {
+  margin: auto;
+  background-color: #262626;
+  opacity: 1px;
+  font-size: 18px;
+  width: 95%;
+  font-weight: lighter;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+.content-catagory {
+  margin: auto;
+  background-color: #262626;
+  width: 55%;
+  opacity: 1px;
+  width: 400px;
+  height: 100px;
+  font-size: 18px;
+  font-weight: lighter;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+.leftcolumn {
+  float: left;
+  width: 73%;
+}
+
+.rightcolumn {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+}
